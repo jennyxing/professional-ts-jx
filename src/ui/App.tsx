@@ -14,8 +14,8 @@ import TeamSelector from './components/TeamSelector';
 const { useState } = React;
 
 const App = () => {
-  // const [teams, setTeams] = useState<Team[] | undefined>(); // an alternate solution
-  const [teams, setTeams] = useState([] as ITeam[]);
+  const [teams, setTeams] = useState<ITeam[] | undefined>(); // an alternate solution
+  // const [teams, setTeams] = useState([] as ITeam[]);
 
   useAsyncDataEffect(() => getAllTeams(), {
     setter: setTeams,
