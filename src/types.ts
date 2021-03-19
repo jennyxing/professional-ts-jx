@@ -2,6 +2,8 @@
 export interface IChannel {
     id: string;
     name: string;
+    teamId: string;
+    description: string;
 }
 
 export interface IUser {
@@ -22,11 +24,14 @@ export interface IHeader {
     description: string;
 }
 export interface IFooter {
-    channel: IChannel;
+    channel: {
+        name: string;
+    };
 }
 
 export interface ITeam {
     id: string;
     name: string;
     channels: IChannel[];
+    iconUrl: string;
 }
