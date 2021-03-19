@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { IHeader } from '../../../types';
 
-const Header = ({ title, description }) => (
+
+const Header: React.FunctionComponent<IHeader> = ({ title, description }) => (
   <header className="border-b flex px-6 py-2 items-center flex-row channel-header">
     <div className="flex-1">
       <h3 className="text-gray-800 mb-1 font-extrabold channel-header__title">

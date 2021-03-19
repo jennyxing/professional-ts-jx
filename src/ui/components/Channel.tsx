@@ -7,12 +7,12 @@ import ChannelMessage from './Channel/Message';
 import Loading from './Loading';
 
 
-const Channel = ({
+const Channel: React.FunctionComponent<any> = ({
   channel,
 }) => {
 
   // const [messages, setMessages] = React.useState<any[]>(); // this is an alternate solution to add typing without making any functional changes
-  const [messages, setMessages] = React.useState([] as any[]);
+  const [messages, setMessages] = React.useState([] as any[]); // this could be problematic if we didn't have the length check on L25
   useAsyncDataEffect(
     () => getChannelMessages(channel.teamId, channel.id),
     {

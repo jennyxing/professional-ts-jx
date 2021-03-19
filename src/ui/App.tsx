@@ -5,6 +5,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import { getAllTeams } from '../data/teams';
+import { ITeam } from '../types';
 import { useAsyncDataEffect } from '../utils/api';
 import Loading from './components/Loading';
 import SelectedTeam from './components/SelectedTeam';
@@ -13,7 +14,8 @@ import TeamSelector from './components/TeamSelector';
 const { useState } = React;
 
 const App = () => {
-  const [teams, setTeams] = useState();
+  // const [teams, setTeams] = useState<Team[] | undefined>(); // an alternate solution
+  const [teams, setTeams] = useState([] as ITeam[]);
 
   useAsyncDataEffect(() => getAllTeams(), {
     setter: setTeams,

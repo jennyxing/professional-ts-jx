@@ -1,6 +1,5 @@
 import { apiCall } from '../utils/networking';
 
-// interface IChannel { }
 const cachedMessageRecordArrays = {};
 
 export async function getChannelMessages(teamId, channelId) {

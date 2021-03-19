@@ -1,4 +1,5 @@
 // whatever you declare here they'll end up being additional globals.
+// use adjust existing libraries
 // only type information exists in this file.
 // declare const googleAnalytics: {} ; //an example
 
