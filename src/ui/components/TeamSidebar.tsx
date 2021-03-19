@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IChannel, ITeam } from '../../types';
+import { ITeam } from '../../types';
 import ChannelLink from './TeamSidebar/ChannelLink';
 
 const TeamSidebar: React.FunctionComponent<{ team: ITeam }> = ({ team }) => {

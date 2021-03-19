@@ -1,5 +1,4 @@
 import { IChannel } from '../types';
-import ChannelLink from '../ui/components/TeamSidebar/ChannelLink';
 import { apiCall } from '../utils/networking';
 
 const cachedChannelRecords: {

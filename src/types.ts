@@ -24,9 +24,7 @@ export interface IHeader {
     description: string;
 }
 export interface IFooter {
-    channel: {
-        name: string;
-    };
+    channel: Pick<IChannel, 'name'>; // use the pick utility type here!
 }
 
 export interface ITeam {

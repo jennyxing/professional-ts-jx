@@ -78,9 +78,9 @@ For example:
 --- a/.eslintrc
 +++ b/.eslintrc
   "rules": {
-+   "@typescript-eslint/no-unsafe-assignment": "off",
-+   "@typescript-eslint/no-unsafe-return": "off",
-+   "@typescript-eslint/no-explicit-any": "off"
++   "@typescript-eslint/no-unsafe-assignment": "error",
++   "@typescript-eslint/no-unsafe-return": "error",
++   "@typescript-eslint/no-explicit-any": "error"
   }
 ```
 
