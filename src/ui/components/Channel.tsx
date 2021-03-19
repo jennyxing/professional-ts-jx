@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { getChannelMessages } from '../../data/messages';
+import { IMessage } from '../../types';
 import { useAsyncDataEffect } from '../../utils/api';
 import ChannelFooter from './Channel/Footer';
 import ChannelHeader from './Channel/Header';
@@ -11,8 +12,9 @@ const Channel: React.FunctionComponent<any> = ({
   channel,
 }) => {
 
-  // const [messages, setMessages] = React.useState<any[]>(); // this is an alternate solution to add typing without making any functional changes
-  const [messages, setMessages] = React.useState([] as any[]); // this could be problematic if we didn't have the length check on L25
+  // const [messages, setMessages] = React.useState<any[]>(); 
+  const [messages, setMessages] = React.useState<undefined | IMessage[]>(); // this is an alternate solution to add typing without making any functional changes
+  // const [messages, setMessages] = React.useState([] as any[]); // this could be problematic if we didn't have the length check on L25
   useAsyncDataEffect(
     () => getChannelMessages(channel.teamId, channel.id),
     {
