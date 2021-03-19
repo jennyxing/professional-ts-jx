@@ -11,7 +11,8 @@ const Channel = ({
   channel,
 }) => {
 
-  const [messages, setMessages] = React.useState();
+  // const [messages, setMessages] = React.useState<any[]>(); // this is an alternate solution to add typing without making any functional changes
+  const [messages, setMessages] = React.useState([] as any[]);
   useAsyncDataEffect(
     () => getChannelMessages(channel.teamId, channel.id),
     {
