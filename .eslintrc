@@ -11,7 +11,9 @@
     "eslint:recommended",
     "prettier",
     "plugin:promise/recommended",
-    "plugin:sonarjs/recommended"
+    "plugin:sonarjs/recommended",
+
+
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -49,7 +51,7 @@
       "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "prettier/react"
+        // "prettier/react"
       ]
     },
     /**
@@ -72,7 +74,7 @@
     {
       "files": ["{src,tests}/**/*.{ts,tsx}"],
       "extends": [
-        "prettier/@typescript-eslint",
+        // "prettier/@typescript-eslint",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
       ],
